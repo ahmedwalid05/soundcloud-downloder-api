@@ -34,7 +34,7 @@ class SoundCloudService {
      * @returns {string} filename
      */
     getFilename(songName){
-        return songName+  crypto.randomBytes(10).toString('hex')+".mp3";
+        return `${songName}-${crypto.randomBytes(10).toString('hex')}.mp3`;
     }
 }
 module.exports = new SoundCloudService();
